@@ -1,9 +1,8 @@
 # algorithm-study
 
-<h1>programmers 기초</h1>
-<br />
+# programmers
 
-# lev1
+- lev1
 
 |no|문제|풀이|메모|
 |:---|---|---|---|
