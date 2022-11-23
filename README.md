@@ -7,6 +7,7 @@
 |no|문제|풀이|메모|
 |:---|---|---|---|
 |01|[로그인성공?](https://school.programmers.co.kr/learn/courses/30/lessons/120883)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EB%A1%9C%EA%B7%B8%EC%9D%B8%EC%84%B1%EA%B3%B5%3F)|dict 자료형|
+|02|[팩토리얼](https://school.programmers.co.kr/learn/courses/30/lessons/120848)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%ED%8C%A9%ED%86%A0%EB%A6%AC%EC%96%BC)||
 
 - lev1
 
