@@ -21,8 +21,11 @@
 |13|[A로 B 만들기]()|[풀이]()||
 |14|[문자열 밀기]()|[풀이]()||
 |15|[부족한 금액 계산하기]()|[풀이]()||
-|16|[2차원 배열 만들기]()|[풀이]()||
+|16|[2차원 배열 만들기]()|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/2%EC%B0%A8%EC%9B%90%EB%B0%B0%EC%97%B4%EB%A7%8C%EB%93%A4%EA%B8%B0)|slicing + step|
 |17|[각도기]()|[풀이]()||
+|18|[같은수](https://school.programmers.co.kr/learn/courses/30/lessons/120890)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EA%B0%99%EC%9D%80%EC%88%98)|sort, lambda 다중조건|
+|19|[7의 개수](https://github.com/wan0911/algorithm-study/tree/main/programmers/7%EC%9D%98%EA%B0%9C%EC%88%98)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/7%EC%9D%98%EA%B0%9C%EC%88%98)|count 함수|
+|20|[한번만 등장한 문자](https://school.programmers.co.kr/learn/courses/30/lessons/120896)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%ED%95%9C%EB%B2%88%EB%A7%8C%EB%93%B1%EC%9E%A5%ED%95%9C%EB%AC%B8%EC%9E%90)||
 
 
 - lev1
