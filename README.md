@@ -34,7 +34,15 @@
 
 |no|문제|풀이|메모|
 |:---|---|---|---|
+|01|[직사각형 별찍기](https://school.programmers.co.kr/learn/courses/30/lessons/12969)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95%EB%B3%84%EC%B0%8D%EA%B8%B0)||
+|02|[서울에서 김서방 찾기](https://school.programmers.co.kr/learn/courses/30/lessons/12919)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EC%84%9C%EC%9A%B8%EC%97%90%EC%84%9C%EA%B9%80%EC%84%9C%EB%B0%A9%EC%B0%BE%EA%B8%B0)||
+|02|[삼총사]()|[풀이]()||
 
+
+#|02|[각도기]()|[풀이]()||
+#|02|[각도기]()|[풀이]()||
+#|02|[각도기]()|[풀이]()||
+#|02|[각도기]()|[풀이]()||
 
 
 
