@@ -3,7 +3,8 @@
 
 > programmers
 <br>
-- lev0
+
+- lev 0
 
 |no|문제|풀이|메모|
 |:---|---|---|---|
@@ -30,7 +31,10 @@
 |21|[진료순서 ](https://school.programmers.co.kr/learn/courses/30/lessons/120835)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EC%A7%84%EB%A3%8C%EC%88%9C%EC%84%9C)||
 
 
-- lev1
+- lev 1
+<!--
+|02|[각도기]()|[풀이]()||
+-->
 
 |no|문제|풀이|메모|
 |:---|---|---|---|
@@ -45,13 +49,10 @@
 
 
 
-#|02|[각도기]()|[풀이]()||
-#|02|[각도기]()|[풀이]()||
-#|02|[각도기]()|[풀이]()||
-
-
-
-- lev2
+- lev 2
+<!--
+|02|[각도기]()|[풀이]()||
+-->
 
 |no|문제|풀이|메모|
 |:---|---|---|---|
@@ -61,22 +62,42 @@
 |04|[오픈채팅방](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/programmers/%EC%98%A4%ED%94%88%EC%B1%84%ED%8C%85%EB%B0%A9)|dict - 데이터 중복x|
 
 
+
+
+- lev 3
+- <!--
+|02|[각도기]()|[풀이]()||
+-->
+<!--
+|no|문제|풀이|메모|
+|:---|---|---|---|
+|01|[코딩테스트공부](https://school.programmers.co.kr/learn/courses/30/lessons/118668)|[풀이]()||
+|02|[두 큐 합 같게 만들기](https://school.programmers.co.kr/learn/courses/30/lessons/118667)|[풀이]()||
+-->
+
+
+
 <br><br><br><br>
+---
 > baekjoon
 
 - 기초
 
 |no|문제|풀이|메모|
 |:---|---|---|---|
-|01|[10828]()|[풀이]()||
-|02|[9093]()|[풀이]()||
-|01|[9012](https://www.acmicpc.net/problem/9012)|[풀이](https://github.com/wan0911/algorithm-study/blob/main/baekjoon/%EA%B8%B0%EC%B4%88/9012.py)|스택|
+|01|[10828 스택]()|[풀이]()||
+|02|[9093 단어뒤집기]()|[풀이]()||
+|03|[9012 괄호](https://www.acmicpc.net/problem/9012)|[풀이](https://github.com/wan0911/algorithm-study/blob/main/baekjoon/%EA%B8%B0%EC%B4%88/9012.py)|스택|
+<!--
+|04|[1874 스택수열](https://www.acmicpc.net/problem/1874)|[풀이]()||
+|05|[1405 에디터](https://www.acmicpc.net/problem/1406)|[풀이]()||
+|06|[10845 큐](https://www.acmicpc.net/problem/10845)|[풀이]()||
+-->
 
 
 
-
-/*
+<!--
 |01|[10828]()|[풀이]()||
 |01|[10828]()|[풀이]()||
 |01|[10828]()|[풀이]()||
-*/
+-->
