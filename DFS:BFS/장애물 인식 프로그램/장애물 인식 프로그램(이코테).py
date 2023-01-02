@@ -1,15 +1,16 @@
 from sys import stdin
 
 n = int(stdin.readline())
-graph = [list(map(int, stdin.readline().rstrip())) for _ in range(n)]     
+graph = [list(map(int, stdin.readline().rstrip())) for _ in range(n)]   
 
-cnt_list = []
-# graph = 2차원 배열
+
+cnt = []
 def dfs(x, y):
     if x <= -1 or x >= n or y <= -1 or y >= n:
         return False
 
     if graph[x][y] == 1:
+        cnt.append(1)
         graph[x][y] = 0
         dfs(x - 1, y)
         dfs(x, y - 1)
@@ -19,13 +20,18 @@ def dfs(x, y):
     return False
 
 result = 0
+cnt_list = []
 for i in range(n):
     for j in range(n):
         if dfs(i, j) == True:
             result += 1
+            cnt_list.append(len(cnt))
+            cnt = []
+            
 print(result) 
-
-
+cnt_list.sort()
+for i in cnt_list:
+    print(i)
 
 '''
 - input
