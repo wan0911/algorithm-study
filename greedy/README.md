@@ -6,4 +6,4 @@
 -->
 |no|문제|풀이|메모|
 |:---|---|---|---|
-|01|[ATM]()|[풀이]()||
+|01|[ATM](https://www.acmicpc.net/source/52549177)|[풀이](https://github.com/wan0911/algorithm-study/tree/main/greedy/ATM)||
