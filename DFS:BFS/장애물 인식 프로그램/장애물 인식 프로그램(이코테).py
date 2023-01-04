@@ -1,3 +1,4 @@
+# 이코테 - 음료수 얼려먹기
 from sys import stdin
 
 n = int(stdin.readline())
