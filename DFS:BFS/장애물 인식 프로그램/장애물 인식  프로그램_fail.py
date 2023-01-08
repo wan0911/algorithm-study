@@ -3,7 +3,7 @@ from sys import stdin
 n = int(stdin.readline())
 graph = [list(map(int, stdin.readline().rstrip())) for _ in range(n)]
 
-# 아마도 1차원에만 해당되지 않나....
+# 아마도 1차원에만 해당되지 않나 xxx -> 그래프 구조: 트리와 배열 구분을 못햇음
 def dfs(graph, start):
     visited, need_visit = list(), list()
     visited.append(start)
