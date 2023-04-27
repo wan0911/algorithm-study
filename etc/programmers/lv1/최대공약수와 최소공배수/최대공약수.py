@@ -34,5 +34,3 @@ def LCM(x,y):
 
 print(GCD(x,y))
 print(LCM(x,y))
-
-# git용 수정
