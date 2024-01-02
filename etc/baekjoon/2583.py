@@ -1,7 +1,6 @@
 from sys import stdin
 from collections import deque
 
-# 10시 35분
 # 이코테 얼음 영역? / 백준 섬의 개수
 # m = 행, n = 열
 # 분리된 영역 갯수, 넓이
