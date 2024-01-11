@@ -33,26 +33,18 @@ chiken_comb = list(combinations(chiken_house, M))
 
 
 # 완탐
-res = []
+res = float("inf")
 # 치킨집 조합에 대한 모든 집에 대한 치킨 도시 거리
 for chiken in chiken_comb:
     # 모든 집에 대하여 완탐
     # 집마다 모든 치킨 집까지 거리 구하기 -> 최소만 distance에 더하기
-    temp = []
-    for h in house:
-        hx, hy = h
-        distance = 0
+    temp = 0  # 도시의 치킨거리
+    for hx, hy in house:
+        distance = float("inf")  # 각 집마다  치킨거리
 
-        for i in range(len(chiken)):
-            cx, cy = chiken[i]
-
-            if i == 0:
-                distance = abs(cx - hx) + abs(cy - hy)
-                continue
-
+        for cx, cy in chiken:
             distance = min(distance, abs(cx - hx) + abs(cy - hy))
-        temp.append(distance)
-    res.append(sum(temp))
+        temp += distance
+    res = min(res, temp)
 
-print(min(res))
-
+print(res)
