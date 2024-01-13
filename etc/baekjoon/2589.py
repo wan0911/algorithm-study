@@ -54,3 +54,13 @@ for i in range(a):
             result = max(result, bfs(i, j))
 
 print(result)
+
+
+"""
+5 7
+WLLWWWL
+LLLWLLL
+LWLWLWW
+LWLWLLL
+WLLWLWW
+"""
