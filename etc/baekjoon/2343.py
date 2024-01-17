@@ -19,11 +19,11 @@ def size():
     for record in records:
         if sum_records + record > mid:
             cnt += 1
-            sum_records = 0
+            sum_records = 0  # 초기화
 
         sum_records += record
 
-    if sum_records > 0:
+    if sum_records > 0:  # 잔여 길이 카운트 (계속 더하다가 mid조건에 걸리지 않아 넘어온 경우)
         cnt += 1
 
     return cnt
@@ -37,9 +37,17 @@ while start <= end:
     count = size()
 
     if count <= M:
-        result = mid
+        result = mid  # 최소 경우의 수
         end = mid - 1
     else:
         start = mid + 1
 
 print(result)
+
+
+
+
+'''
+9 3
+1 2 3 4 5 6 7 8 9
+'''
