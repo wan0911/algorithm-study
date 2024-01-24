@@ -32,23 +32,52 @@ print(cnt)
 
 
 # 2. whlie, for론... x -> heap으로 빼는 법
-
-# 데드라인 != 문제 푸는 시간 -> 데드라인이 되기 전에 문제를 풀어버릴 수 있음 (ex. d=2, 1시간 만에 풀기 o)
-# 문제의 총 데드라인 = max(d)
-# 1 문제를 푸는 데 1시간이 소요됨
-
 from sys import stdin
 from heapq import heappop, heappush
 
 N = int(stdin.readline().rstrip())
 data = [[*map(int, stdin.readline().split())] for _ in range(N)]
-data.sort(key=lambda x: (x[0], x[1]))
+data.sort(key=lambda x: (x[0], -x[1]))
 
-res = []  # 푼 문제 리스트, 즉 len(res)는 문제를 푸는데 총 걸린 시간
-for d, r in data:
-    heappush(res, r)  # 모든 원소들을 넣음
-
-    if len(res) > d:  # 문제를 푼 시간(갯수)보다 데드라인이 짧을 때, data가 데드라인 순으로 정렬되있기 때문에 가능..
-        heappop(res)  # 현재 들어간 문제들 중에서, 가장 작은 r(보상)을 빼냄 -> 데드라인에 한해서 최소는 계속 제거 됨
+res = []
+for d in data:
+    heappush(res, d[1])
+    if d[0] < len(res):
+        heappop(res)
 
 print(sum(res))
+
+
+
+# 3. 시간 초과 풀이
+# 비효율적인 로직임... 위에 방식으로 다시 암기하기
+from sys import stdin
+
+N = int(stdin.readline().rstrip())
+nums = [i for i in range(1, N+1)]
+
+primes = []
+for i in range(1, N+1):
+    if i < 2: continue
+
+    is_prime = True
+    for j in range(2, int(i*0.5) + 1):
+        if i % j == 0:
+            is_prime = False
+
+    if is_prime:
+        primes.append(i)
+
+# 전부 연속되어야 함 -> 0번째부터 더하면서 N이 되면 Ok, 중간에 N이 되버리면 pass
+cnt = 0
+for i in range(len(primes)):
+    for j in range(i+1, len(primes)+1):
+        num = sum(primes[i:j]) 
+
+        if num > N:
+            break
+        if num == N:
+            cnt +=1
+
+print(cnt)
+
