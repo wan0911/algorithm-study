@@ -1,9 +1,0 @@
-a
-tv
-ptoui
-bontres
-zoggax
-wiinq
-eep
-houctuh
-end
