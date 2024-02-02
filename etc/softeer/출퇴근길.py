@@ -33,7 +33,38 @@ def dfs(v):
 dfs(home)
 print(res)
 
-# xx
+## 소프티어 풀이
+# S->T / T->S 2번 DFS
+n,m=map(int, input().split())   
+    adj=[[] for _ in range(n+1)]    
+    adjR=[[] for _ in range(n+1)]   # T->S
+    for _ in range(m):
+        a,b,=map(int,input().split())
+        adj[a].append(b)    
+        adjR[b].append(a)
+    S,T=map(int, input().split())   
+
+
+    fromS=[0]*(n+1)
+    fromS[T]=1          
+    DFS(S,adj,fromS)
+
+    fromT=[0]*(n+1)
+    fromT[S]=1          
+    DFS(T,adj,fromT)
+
+    toS=[0]*(n+1)
+    DFS(S,adjR,toS)
+
+    toT=[0]*(n+1)
+    DFS(T,adjR,toT)
+    
+    count=0
+    for i in range(1,n+1):
+        if fromS[i] and fromT[i] and toS[i] and toT[i]:
+            count+=1
+
+    print(count-2)
 
 
 
