@@ -14,19 +14,22 @@ nums.sort()
 
 res = 0
 temp = []
+while True:
+    num = nums.pop(0)
+    res += num
+    
+    if num > 0:
+        temp.append(num)
+        break
+        
+temp.extend(nums)
 
-
-# for i in range(0, len(nums), 2):
-#     if i == len(nums):
-#         n1, n2 = nums[i], 0
-#     else:
-#         print(i)
-#         n1, n2 = nums[i], nums[i + 1]
-
-    # if n1 * n2 <= 0:
-    #     res += (n1 + n2)
-    # else:
-    #     res += (n1*n2)
+for i in range(0,len(temp),2):
+    if i != len(temp):
+        res += temp[i] * temp[i+1]
+        continue
+    res += temp[i]
+    
 
 print(res)
 
