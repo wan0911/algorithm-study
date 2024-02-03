@@ -6,32 +6,46 @@
 # 2개씩 끊어서, 음수 체크
 ## 음수가 있으면 무조건 더하기
 
+# pop으로 하면, index를 체크 안해도 됨
+
+
 from sys import stdin
 
 N = int(stdin.readline().rstrip())
 nums = [int(stdin.readline().rstrip()) for _ in range(N)]
-nums.sort()
 
+negative = []
+positive = []
 res = 0
-temp = []
-while True:
+while len(nums) > 0:
     num = nums.pop(0)
-    res += num
-    
-    if num > 0:
-        temp.append(num)
-        break
+    if num == 1:
+        res += num  # 1만 예외 경우
+    elif num > 0:
+        positive.append(num)
+    else:
+        negative.append(num)
         
-temp.extend(nums)
 
-for i in range(0,len(temp),2):
-    if i != len(temp):
-        res += temp[i] * temp[i+1]
-        continue
-    res += temp[i]
-    
+positive.sort(reverse=True)
+negative.sort()  
+
+# print(negative, positive)
+
+for i in range(0, len(negative), 2):    # negative는 0을 가장 마지막에 계산되도록..
+    if i + 1 >= len(negative):
+        res += negative[i]
+    else:
+        res += negative[i] * negative[i + 1]
+
+for i in range(0, len(positive), 2):    # ***positive는 내림차순 정렬로 큰 수부터 계산되도록
+    if i + 1 >= len(positive):
+        res += positive[i]
+    else:
+        res += positive[i] * positive[i + 1]
 
 print(res)
+
 
 
 """
@@ -50,4 +64,12 @@ print(res)
 4
 3
 5
+"""
+
+"""
+4
+-2
+-1
+0
+1
 """
