@@ -54,7 +54,7 @@ for team in comb:
     
 print(min_sum)
 
-
+## 내가 푼건 쓰레기 코드구만...ㅋ
 
 
 
