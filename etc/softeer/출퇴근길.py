@@ -1,3 +1,5 @@
+# 1. 오답
+
 # 새로운 동네
 # 출/퇴근길 모두 방문하는 동네.., S -> T(1번) / T -> S(1번), S != T
 # 단방향 그래프, 인접 리스트
@@ -10,74 +12,77 @@
 
 from sys import stdin
 
-N, M = map(int, stdin.readline().split('_'))
+N, M = map(int, stdin.readline().split())
 graph = [[] for _ in range(N + 1)]
-visited = [[0] * (N + 1)]
+fromS = [0] * (N + 1)
+fromT = [0] * (N + 1)
 for _ in range(M):
-    x, y = map(int, stdin.readline().split('_'))
+    x, y = map(int, stdin.readline().split())
     graph[x].append(y)
-home, company = map(int, stdin.readline().split('_'))
+home, company = map(int, stdin.readline().split())
 
 res = []
+def dfs(start, target, visited):
+    visited[start] = 1
 
-
-def dfs(v):
-    visited[v] = 1
-
-    for node in graph[v]:
-        if not visited[node]:
+    for node in graph[start]:
+        if not visited[node] and node != target:
             res.append(node)
-            dfs(node)
+            dfs(node, target, visited)
 
 
-dfs(home)
+dfs(home, company, fromS)
+dfs(company, home, fromT)
+
+
 print(res)
+# res_cnt = [0] * (N+1)
+# for r in res:
+#     res_cnt[r] += 1
 
-## 소프티어 풀이
-# S->T / T->S 2번 DFS
-n,m=map(int, input().split())   
-    adj=[[] for _ in range(n+1)]    
-    adjR=[[] for _ in range(n+1)]   # T->S
-    for _ in range(m):
-        a,b,=map(int,input().split())
-        adj[a].append(b)    
-        adjR[b].append(a)
-    S,T=map(int, input().split())   
+# print(len([x for x in res_cnt if x > 1]))
 
 
-    fromS=[0]*(n+1)
-    fromS[T]=1          
-    DFS(S,adj,fromS)
+# 2. 재풀이
 
-    fromT=[0]*(n+1)
-    fromT[S]=1          
-    DFS(T,adj,fromT)
-
-    toS=[0]*(n+1)
-    DFS(S,adjR,toS)
-
-    toT=[0]*(n+1)
-    DFS(T,adjR,toT)
-    
-    count=0
-    for i in range(1,n+1):
-        if fromS[i] and fromT[i] and toS[i] and toT[i]:
-            count+=1
-
-    print(count-2)
-
-
+"""
+5 9
+1 2
+1 4
+2 1
+2 3
+3 4
+3 5
+4 1
+4 3
+5 1
+1 3
+"""
 
 '''
-5_9↵
-1_2↵
-1_4↵
-2_1↵
-2_3↵
-3_4↵
-3_5↵
-4_1↵
-4_3↵
-5_1↵
-1_3
+8 14
+1 2
+1 5
+1 7
+2 3
+3 1
+4 1
+4 2
+5 4
+5 8
+6 2
+6 3
+7 1
+7 6
+8 7
+6 5
+'''
+'''
+5 5
+1 2
+2 1
+2 3
+3 2
+2 4
+1 3
 '''
