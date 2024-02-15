@@ -16,8 +16,8 @@ def preOrder(cur_node):
 
     print(cur_node, end="")
 
-    preOrder(tree[cur_node][0])
-    preOrder(tree[cur_node][1])
+    preOrder(tree[cur_node][0]) # 왼쪽 노드
+    preOrder(tree[cur_node][1]) # 오른쪽 노드
 
 
 # 중위 순회: 왼쪽 노드 -> 현재 노드 -> 오른쪽 노드
