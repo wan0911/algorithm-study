@@ -14,7 +14,7 @@ N, M = map(int, input().split())
 counts = [int(input().rstrip()) for _ in range(M)]
 
 left, right = 1, max(counts)
-res = 10 ** 6
+res = 0
 while left <= right:
     mid = (left + right) // 2
     cnt = 0
@@ -26,13 +26,13 @@ while left <= right:
             cnt += (ct // mid) + 1
 
     if cnt > N:
-        res = mid
         left = mid + 1
     else:
+        res = mid
         right = mid - 1
 
 
-print(left)
+print(res)
 
 """
 5 2
