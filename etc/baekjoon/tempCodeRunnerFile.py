@@ -1,3 +1,2 @@
-5 2
-7
-4
+counter = Counter(str(num))
+# print(counter(["0"]))
