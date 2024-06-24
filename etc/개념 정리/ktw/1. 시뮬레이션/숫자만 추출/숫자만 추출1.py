@@ -14,7 +14,6 @@ for i in range(1, num + 1):
 
 print(cnt)
 
-
 """
 g0en2Ts8eSoft
 """
