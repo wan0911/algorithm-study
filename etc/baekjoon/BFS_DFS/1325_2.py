@@ -1,5 +1,8 @@
 # 해킹
 # dfs로 풀어야 시간복잡도가 작아지나? -> ㄴㄴ
+'''
+- 방향 그래프 -> 방문 초기화 X
+'''
 
 import sys
 
@@ -27,7 +30,7 @@ def dfs(v, visited, cnt):
 res = 0
 lst = []
 for i in range(1, N + 1):
-    visited = [0 for _ in range(N + 1)]
+    visited = [0] * (N + 1)
     tmp = dfs(i, visited, cnt=1)
 
     if res < tmp:
