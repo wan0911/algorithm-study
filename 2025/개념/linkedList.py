@@ -1,5 +1,5 @@
 # linkedList는 비연속적이므로 head부터 탐색해서 가야한다. -> O(n)
-# linkedList는 코테 단골 소재는 아니지만, 이후 tree를 학습하기 위해 배워야 한다
+# linkedList는 코테 단골 소재는 아니지만, 이후 tree / graph를 학습하기 위해 배워야 한다
 
 
 class Node:
@@ -15,7 +15,14 @@ class LinkedList(object):
 
     # O(n)
     def append(self, value):
-        pass
+        new_node = Node(value)
+        if self.head is None:
+            self.head = new_node
+        else:
+            current = self.head
+            while self.next:  # self.next is None
+                current = current.next
+            current.next = new_node
 
     # O(1): insert_back
     def append2(self, value):
@@ -34,7 +41,7 @@ class LinkedList(object):
         return current.value
 
     # O(n)
-    def insert(self, idx, value):
+    def insert(self, idx):
         current = self.head
         NewNode = Node()
         # insert하려는 앞 노드까지
