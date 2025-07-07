@@ -11,13 +11,22 @@ def get_max_discounted_price(prices, coupons):
     coupons.sort(reverse=True)
     result = 0
 
-    while prices:
-        cur_price = prices.pop(0)
-        if len(coupons) == 0 or coupons[0] == 0:
-            result += cur_price
-            continue
-        cur_coupon = coupons.pop(0)
-        result += (100 - cur_coupon) * cur_price // 100
+    # prices든 coupon이든 둘 중 하나만 배열 값이 없다면, 반복문을 할 필요 (x)
+    # while prices:
+    #     cur_price = prices.pop(0)
+    #     if len(coupons) == 0 or coupons[0] == 0:
+    #         result += cur_price
+    #         continue
+    #     cur_coupon = coupons.pop(0)
+    #     result += (100 - cur_coupon) * cur_price // 100
+
+    while prices and coupons:
+        c_p = prices.pop(0)
+        c_c = coupons.pop(0)
+        result += (100 - c_c) * c_p // 100  # (100 - c_c) 이므로 0인 경우 고려 X
+
+    if len(prices):
+        result += sum(prices)
 
     return result
 
