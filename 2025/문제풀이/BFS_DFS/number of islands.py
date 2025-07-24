@@ -31,3 +31,33 @@ class Solution(object):
                     bfs(i, j)
 
         print(cnt)
+
+
+""" DFS 풀이
+class Solution(object):
+    def numIslands(self, grid):
+        m, n = len(grid), len(grid[0])
+        dx, dy = [0, 0, -1, 1], [1, -1, 0, 0]  # 상하좌우
+        cnt = 0
+
+        def dfs(x, y):
+            q = [[x, y]]
+            grid[x][y] = "0"
+
+            for k in range(4):
+                nx, ny = x + dx[k], y + dy[k]
+                if 0 <= nx < m and 0 <= ny < n and grid[nx][ny] == "1":
+                    grid[nx][ny] == "0"
+                    dfs(nx, ny)
+        
+        # 탐색 시작
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == "1":
+                    cnt += 1
+                    dfs(i, j)
+
+        print(cnt)
+        return cnt # return이 무조건 있어야 하나?
+
+"""
