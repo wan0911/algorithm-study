@@ -34,6 +34,6 @@ def solution(jobs):
             tot_times.append(curr_time - start_t)
             completed_jobs += 1
         else:
-            curr_time += jobs[curr_job_idx][0]
+            curr_time = jobs[curr_job_idx][0]
     
     return sum(tot_times) // completed_jobs
